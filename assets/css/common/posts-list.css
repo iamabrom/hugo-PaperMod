@@ -67,22 +67,45 @@
 }
 
 @media (max-width: 650px) {
+    .posts-section {
+        width: 90%;
+        /* Wider container on mobile */
+    }
+
+    .post-item {
+        margin: 1em 0;
+        /* More vertical spacing between items */
+    }
+
     .post-item a {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0;
+        width: 100%;
     }
 
-    .post-title {
+    .post-title-home {
         max-width: 100%;
         margin-bottom: 0.3em;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        white-space: normal;
+        /* Allow wrapping for very long titles */
+        line-height: 1.3;
     }
 
     .post-line {
         display: none;
     }
 
-    .post-item time {
-        font-size: 1em;
+    .post-item .time-home {
+        font-size: 0.9em;
         min-width: auto;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 0;
+        align-self: flex-start;
+        font-weight: 300;
     }
 }
