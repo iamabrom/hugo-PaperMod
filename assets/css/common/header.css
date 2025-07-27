@@ -95,9 +95,13 @@ body:not(.dark) #sun {
 }
 
 .header-line {
-    width: calc(var(--nav-width) + var(--gap) * 2);
+    width: calc(var(--nav-width));
     margin-top: -5px;
     margin-bottom: 5px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-start: var(--gap);
+    padding-inline-end: var(--gap);
 }
 
 .slogan {
