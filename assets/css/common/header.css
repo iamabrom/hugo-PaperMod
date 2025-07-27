@@ -6,6 +6,7 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    margin-bottom: 0;
 }
 
 .nav a {
@@ -27,7 +28,8 @@
     font-weight: 700;
 }
 
-.logo a img, .logo a svg {
+.logo a img,
+.logo a svg {
     display: inline;
     vertical-align: middle;
     pointer-events: none;
@@ -57,7 +59,7 @@ body:not(.dark) #sun {
     white-space: nowrap;
 }
 
-#menu li + li {
+#menu li+li {
     margin-inline-start: var(--gap);
 }
 
@@ -90,4 +92,23 @@ body:not(.dark) #sun {
 
 .logo-switches {
     flex-wrap: inherit;
+}
+
+.header-line {
+    width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.slogan {
+    font-size: 0.8em;
+    font-style: italic;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-start: var(--gap);
+    padding-inline-end: var(--gap);
+    margin-top: -5px;
+    margin-bottom: 5px;
+    line-height: 1;
 }
