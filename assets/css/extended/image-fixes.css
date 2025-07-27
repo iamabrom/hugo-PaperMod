@@ -1,0 +1,60 @@
+/* Image improvements for better display on all devices */
+
+/* Make sure images are properly responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Maintain aspect ratio on all devices */
+.post-content img {
+    object-fit: contain;
+    max-height: 80vh;
+    /* Limit maximum height on large screens */
+}
+
+/* Lightbox images need proper handling */
+a img {
+    transition: opacity 0.2s ease;
+}
+
+a:hover img {
+    opacity: 0.9;
+}
+
+/* Fix for images in markdown content */
+.post-content p>img {
+    margin: 1.5rem auto;
+    border-radius: var(--radius);
+}
+
+/* Handle figures with captions properly */
+figure {
+    margin: 1.5rem auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Special case for hero/cover images */
+.post-cover img {
+    width: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+
+/* Optimize for high-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    img {
+        image-rendering: auto;
+    }
+}

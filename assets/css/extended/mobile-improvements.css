@@ -1,0 +1,82 @@
+/* Mobile improvements without breaking changes */
+
+/* Better handling for code blocks on mobile */
+.post-content pre {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    background: var(--code-block-bg);
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure images and embedded content are properly constrained */
+iframe,
+video,
+embed,
+object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive table improvements */
+@media screen and (max-width: 768px) {
+
+    /* Add horizontal scroll to tables instead of breaking layout */
+    .post-content table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+
+    /* Adjust font sizes for better readability on small screens */
+    .post-title {
+        font-size: 32px;
+        /* Slightly smaller title on mobile */
+    }
+
+    .post-content h1 {
+        font-size: 32px;
+    }
+
+    .post-content h2 {
+        font-size: 28px;
+    }
+
+    /* Adjust list padding for better display on small screens */
+    .post-content ul,
+    .post-content ol {
+        padding-inline-start: 16px;
+    }
+
+    /* Improve blockquote display on mobile */
+    .post-content blockquote {
+        margin: 16px 0;
+        padding: 0 10px;
+    }
+}
+
+/* Fix for very narrow screens */
+@media screen and (max-width: 480px) {
+
+    /* More conservative padding/margins on very small screens */
+    .post-content p,
+    .post-content ul,
+    .post-content ol,
+    .post-content blockquote,
+    .post-content figure {
+        margin-bottom: 16px;
+    }
+
+    /* Ensure share buttons don't overflow */
+    .share-buttons {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* Improve pagination on small screens */
+    .paginav a {
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+    }
+}

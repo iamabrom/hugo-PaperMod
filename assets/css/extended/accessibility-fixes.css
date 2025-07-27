@@ -1,0 +1,83 @@
+/* Accessibility and general usability improvements */
+
+/* Ensure touch targets are large enough */
+button,
+.post-tags a,
+.pagination a,
+.share-buttons a,
+nav a,
+.post-footer a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Improve focus states for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Better text legibility */
+@media screen and (max-width: 768px) {
+    body {
+        line-height: 1.7;
+        /* Slightly increased line height for better readability */
+    }
+
+    /* Ensure proper contrast */
+    .post-meta,
+    .post-content blockquote,
+    .post-content figcaption,
+    .post-footer {
+        color: var(--secondary);
+        opacity: 0.9;
+        /* Increase opacity for better contrast */
+    }
+
+    /* Better link tap targets in content */
+    .post-content a {
+        padding: 2px 0;
+        display: inline-block;
+    }
+}
+
+/* Improve form elements on touch devices */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+    font-size: 16px;
+    /* Prevents iOS zoom on focus */
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--entry);
+    color: var(--primary);
+    max-width: 100%;
+}
+
+/* Fix for elements that might be clipped on small screens */
+pre,
+code,
+table {
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+/* Smooth scrolling for a better experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Disable smooth scrolling for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
