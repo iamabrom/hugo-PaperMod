@@ -14,11 +14,20 @@ nav a,
     justify-content: center;
 }
 
-/* Improve focus states for keyboard navigation */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
+/* Remove default focus outlines for mouse users but keep them for keyboard */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+    outline: none;
+    outline-offset: 0;
+}
+
+/* Improve focus states for keyboard navigation only */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
