@@ -50,10 +50,10 @@ textarea:focus-visible {
     }
 
     /* Better link tap targets in content */
-    .post-content a {
-        padding: 2px 0;
+    /* .post-content a {
+        padding: 0.01em 0;
         display: inline-block;
-    }
+    } */
 }
 
 /* Improve form elements on touch devices */
