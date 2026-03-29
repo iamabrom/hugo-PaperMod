@@ -51,7 +51,7 @@
 
 .post-content h2 {
     margin: 32px auto 24px;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .post-content h3 {
@@ -73,6 +73,7 @@
 .post-content a,
 .toc a:hover {
     box-shadow: 0 1px 0;
+    color: #A7BF2E;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
