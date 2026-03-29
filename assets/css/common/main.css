@@ -68,7 +68,8 @@ pre:hover .copy-code {
 .slogan-home {
     font-size: 1em;
     font-style: italic;
-    color: #A7BF2E;
+    color: #6CB4E4;
+    /* color: #A7BF2E; */
     /* color: #F95A37; */
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin-inline-start: auto;
