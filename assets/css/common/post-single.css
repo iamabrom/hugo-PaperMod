@@ -27,6 +27,7 @@
     list-style: none;
     margin: auto 3px;
     box-shadow: 0 1px 0 var(--secondary);
+    color: var(--link-hover-color)
 }
 
 .breadcrumbs a {

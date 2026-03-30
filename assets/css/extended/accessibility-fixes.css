@@ -44,7 +44,7 @@ textarea:focus-visible {
     .post-content blockquote,
     .post-content figcaption,
     .post-footer {
-        color: var(--secondary);
+        /* color: var(--secondary); */
         opacity: 0.9;
         /* Increase opacity for better contrast */
     }
